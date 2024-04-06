@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
-//while (true){   
+//while (true){
     System.out.println("==================================");
     System.out.println("| NAMA = AHMAD ZAINI a.k.a Pacen |");
     System.out.println("| NIM  = 233510008               |");
@@ -19,9 +19,6 @@ public class App {
     String tumbal;
     double nilai_akhir = 0;
     String nama_matkul = "";
-    String nama_matkul1 = "Pengenalan Pemrograman";
-    String nama_matkul2 = "Basis Data";
-    String nama_matkul3 = "Literasi Data dan Teknologi";
     Scanner input = new Scanner(System.in);
     BufferedReader input1 = new BufferedReader(new InputStreamReader(System.in));
 //Judul atau header
@@ -60,32 +57,24 @@ public class App {
     nilai_absen = input.nextInt();
     nilai_absen1 = 16 - nilai_absen;
     nilai_absen2 = nilai_absen1 * 6.25 ;
- //Kehadiran absen maksimal 3x tidak masuk
+//Kehadiran absen maksimal 3x tidak masuk
 //Switch case Mata Kuliah
 if(nilai_absen > 3){
     System.out.println("Anda harus Mengulang Semester");
-    if (matkul ==1) {
-        nama_matkul=nama_matkul1;
-    }else if (matkul==2) {
-        nama_matkul=nama_matkul2;
-    }else if (matkul==3) {
-        nama_matkul=nama_matkul3;
-    }
-         }
-else if (nilai_absen <= 3) {
+}else if (nilai_absen <= 3) {
     switch (matkul){
         case 1 :
-            nama_matkul = nama_matkul1;
+            nama_matkul = "Pengenalan Pemrograman";
             nilai_akhir = (0.35 * nilai_pr) + (0.25 * nilai_uts) + (0.25 * nilai_uas) + (0.1 * nilai_quis) + (0.1 * nilai_absen2);
-            
-        case 2 : 
-           nama_matkul = nama_matkul2;
+            break;
+        case 2 :
+            nama_matkul = "Basis Data I";
             nilai_akhir = (0.35 * nilai_pr) + (0.25 * nilai_uts) + (0.25 * nilai_uas) + (0.1 * nilai_quis) + (0.1 * nilai_absen2);
-             
-        case 3 : 
-            nama_matkul = nama_matkul3;
+            break;
+        case 3 :
+            nama_matkul = "Literasi Data Dan Teknologi";
             nilai_akhir = (0.35 * nilai_pr) + (0.25 * nilai_uts) + (0.25 * nilai_uas) + (0.1 * nilai_quis) + (0.1 * nilai_absen2);
-             
+            break;
             }
         }
 //decision berdasarkan nilai akhir
@@ -101,13 +90,13 @@ if (nilai_akhir < 30){
 }else if (nilai_akhir > 35 && nilai_akhir <= 40) {
     nilai_bobot = 1.75;
     huruf_bobot = "C-";
-   keterangan_bobot = "Kurang";
+    keterangan_bobot = "Kurang";
 }else if (nilai_akhir > 40 && nilai_akhir <= 50) {
-     nilai_bobot = 2.0;
+    nilai_bobot = 2.0;
     huruf_bobot = "C";
     keterangan_bobot = "Cukup";
 }else if (nilai_akhir > 50 && nilai_akhir <= 55) {
-     nilai_bobot = 2.5;
+    nilai_bobot = 2.5;
     huruf_bobot = "C+";
     keterangan_bobot = "Cukup";
 }else if (nilai_akhir > 55 && nilai_akhir <= 60) {
@@ -127,9 +116,9 @@ if (nilai_akhir < 30){
     huruf_bobot = "A-";
     keterangan_bobot = "Baik Sekali";
 }else if (nilai_akhir > 80) {
-   nilai_bobot = 4.0;
-   huruf_bobot = "A";
-   keterangan_bobot = "Sangat Baik Sekali";
+    nilai_bobot = 4.0;
+    huruf_bobot = "A";
+    keterangan_bobot = "Sangat Baik Sekali";
 }
 
 //Hasil Akhir
@@ -148,7 +137,7 @@ System.out.println("| Keterangan  = " + keterangan_bobot + "               ");
 System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|");
 
 
-//developed by pacen/zainipacen
+//developed by pacen/zainipacen instagram : @zainipacen
 
 
     }
